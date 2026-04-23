@@ -1,0 +1,58 @@
+# 2026-04-23
+
+## 문제 1 - 문자열 잘라서 정렬하기
+### ✅ ANSWER
+```python
+def solution(myString):
+    # 1. split('x')로 자른다.
+    # 2. if s: 를 통해 빈 문자열('')이 아닌 것만 골라낸다.
+    # 3. sorted()로 사전순 정렬한다.
+    return sorted([s for s in myString.split('x') if s])
+```
+- 배운 점:
+    - 빈 문자열("")은 False로 간주
+    - 단 마지막이 \로 끝나면 오류가 날 수 있음   
+---
+
+## 문제 2 - 배열의 길이에 따라 다른 연산하기
+### ❌ TRY
+```python
+def solution(arr, n):
+    answer = []
+    if len(arr) % 2 == 0 :
+        for i in arr :
+            arr[i] += n 
+            i += 2
+    else :
+        for i*2 in arr :
+            arr[i] += n
+    return answer 
+```
+- 오류 :
+    - 파이썬은 for문에 i가 배열 값
+
+### ✅ ANSWER : 슬라이싱
+```python
+def solution(arr, n):
+    if len(arr) % 2 != 0:
+        # 홀수 길이: 0, 2, 4... 인덱스에 n 더하기
+        for i in range(0, len(arr), 2):
+            arr[i] += n
+    else:
+        # 짝수 길이: 1, 3, 5... 인덱스에 n 더하기
+        for i in range(1, len(arr), 2):
+            arr[i] += n
+    return arr
+```
+- 배운 점:
+    - range(start, stop, step)
+
+
+## ❓ 복습 키워드
+- Raw String 사용 [특수문자 출력하기]
+    - r을 붙이면 내부의 모든 문자를 있는 그대로(Raw) 인식. 단, 마지막이 \로 끝나면 오류가 날 수 있음
+- swapcase() [대소문자 바꿔서 출력하기]
+    - 대소문자를 변환해줌
+- split() 인자를 주지 않고 호출 [공백으로 구분하기 2]
+    - ex)" i    love  you"	/ answer) ["i", "love", "you"]
+- len() : 길이 구하기 [x 사이의 개수]
