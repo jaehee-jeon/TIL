@@ -1,0 +1,70 @@
+# 2026-04-21
+
+## 문제 1 - 0 떼기
+### ❌ TRY
+```python
+def solution(n_str):
+    answer = ''
+    
+    n_str = [i for [:] in list(int(n_str)) == 0 ]
+    
+    return answer
+```
+- 배운 점:
+    - 숫자형은 리스트처럼 for문을 돌리거나 [:] 슬라이싱 불가
+        * for문 == list()가능
+            - str (문자열) , list(배열), dict, est, tuple 등..
+### ✅ ANSWER
+```python
+def solution(n_str):
+    answer = ''
+    
+    answer = str(int(n_str))
+
+    return answer
+```
+- 배운 점:
+    - 문자열을 숫자로 바꾸면 앞의 0이 자동으로 날아감
+
+---
+
+## 문제 2 - 문자열 정수의 합
+### ❌ TRY
+```python
+def solution(num_str):
+    answer = 0
+    answer += int(num_str[:])
+    return answer 
+```
+### ✅ ANSWER
+```python
+def solution(num_str):
+    answer = 0
+    for i in num_str :
+        answer += int(i)
+    return answer
+```
+- 배운 점:
+    - for문 <-> 슬라이싱[:]
+        * 슬라이싱[:] : 복사 및 추출 (덩어리째)
+            - ex) 123456789
+        * 루프for : 반복 및 처리 (하나씩 꺼내서 작업)
+            - ex) 1 2 3 4 5 6 7 8 9
+---
+
+## 문제 3 - 뒤에서 5등까지
+### ✅ ANSWER
+```python
+def solution(num_list):
+    answer = []
+    num_list = sorted(num_list)
+    answer = num_list[:5]
+    return answer
+```
+- 배운 점:
+    - sorted() : 정렬 함수
+
+## ❓ 복습 키워드
+- [ ] 파이썬의 자료형별 반복 가능(Iterable) 여부
+- [ ] 슬라이싱([:])의 정확한 동작 원리
+- [ ] sorted() vs list.sort() 차이점
