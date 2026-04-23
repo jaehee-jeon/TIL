@@ -91,3 +91,4 @@ def solution(my_string, index_list):
 - in 연산 시 List vs Set
 - _ (더미 변수)
 - join() 함수와 문자열 조립
+- range() 함수
