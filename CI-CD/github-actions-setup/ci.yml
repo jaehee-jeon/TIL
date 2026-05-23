@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'  # 3.14 → 3.11로 수정
+          python-version: '3.14'  
       - run: pip install -r requirements.txt  # 1. 패키지 먼저
       - run: pip install pytest               # 2. pytest 설치
       - run: pytest test_hello.py -v          # 3. 테스트
