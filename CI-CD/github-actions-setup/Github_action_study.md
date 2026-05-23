@@ -45,7 +45,7 @@ project/
 mkdir -p .github/workflows
 ```
 
-> ⚠️ `.github` 앞에 `.` 이 있어야 한다. GitHub이 이 경로를 자동으로 감지한다.
+> ⚠️ `.github` 앞에 `.` 이 있어야 한다. GitHub가 이 경로를 자동으로 감지한다.
 
 ---
 
